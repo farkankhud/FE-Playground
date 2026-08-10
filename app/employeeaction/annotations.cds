@@ -27,6 +27,10 @@ annotate service.Employees with @(
                 $Type : 'UI.DataField',
                 Label : 'salary',
                 Value : salary,
+            }, {
+                $Type : 'UI.DataField',
+                Label : 'Department',
+                Value : department_ID,
             },
         ],
     },
@@ -72,4 +76,24 @@ annotate service.Employees with @(
         },
     ],
 );
+
+annotate service.Employees with {
+    department @Common.ValueList : {
+        $Type : 'Common.ValueListType',
+        CollectionPath : 'Departments',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : department_ID,
+                ValueListProperty : 'ID',
+            },
+            {
+                $Type : 'Common.ValueListParameterDisplayOnly',
+                ValueListProperty : 'name',
+            },
+        ],
+    }
+};
+
+
 

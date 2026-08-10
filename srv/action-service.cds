@@ -9,5 +9,10 @@ service ActionService {
         actions {
             action promoteEmployee() returns String;
         };
+         entity Departments
+        as projection on playground.Departments;
+
+    entity Roles
+        as projection on playground.Roles;
 
 }
