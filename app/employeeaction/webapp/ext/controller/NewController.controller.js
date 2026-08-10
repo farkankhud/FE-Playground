@@ -42,12 +42,12 @@ sap.ui.define(['sap/ui/core/mvc/ControllerExtension',
 
 
 				},
-				onAfterDelete: async function (oContext) {
+				// onAfterDelete: async function (oContext) {
                    
-                        MessageToast.show(
-                            "Employee deleted successfully."
-                        );
-                    }
+                //         MessageToast.show(
+                //             "Employee deleted successfully."
+                //         );
+                //     }
 			}
 		}
 	});
