@@ -11,13 +11,15 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-employees": "cds watch --open playground.employee.employees/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-employees": "cds watch --open playground.employee.employees/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-employeeaction": "cds watch --open playground.employeeaction.employeeaction/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/employees"
+    "app/employees",
+    "app/employeeaction"
   ]
 }

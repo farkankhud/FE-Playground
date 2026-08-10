@@ -1,6 +1,6 @@
 using playground from '../db/schema';
 
-@odata.draft.enabled: true
+ @odata.draft.enabled: true
 service CatalogService {
     @odata.draft.enabled: true
     entity Employees
