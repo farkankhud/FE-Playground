@@ -1,0 +1,6 @@
+ID,roleName,description,department_ID
+aaaaaaaa-1111-1111-1111-111111111111,Developer,Software Developer,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+bbbbbbbb-1111-1111-1111-111111111111,Architect,Software Architect,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+cccccccc-1111-1111-1111-111111111111,Finance Analyst,Financial Analysis,cccccccc-cccc-cccc-cccc-cccccccccccc
+dddddddd-1111-1111-1111-111111111111,Accountant,Accounting Specialist,dddddddd-dddd-dddd-dddd-dddddddddddd
+eeeeeeee-1111-1111-1111-111111111111,HR Manager,Human Resources Manager,eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee

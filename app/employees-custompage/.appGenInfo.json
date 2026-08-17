@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Aug 13 2026 05:20:25 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "Local CAP",
+    "metadataFilename": "",
+    "serviceUrl": "http://localhost:4004/odata/v4/custompage/",
+    "appName": "employees-custompage",
+    "appTitle": "Employees Custom Page",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "playground.employee.custompage",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.151.0",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": false,
+    "generatorVersion": "1.30.0",
+    "template": "Custom Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Employees"
+      }
+    ],
+    "launchText": "To launch the generated app, start your CAP project:  and navigate to the following location in your browser:\n\nhttp://localhost:4004/playground.employee.custompage.employeescustompage/index.html"
+  }
+}

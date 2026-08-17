@@ -4,6 +4,7 @@ using { cuid, managed } from '@sap/cds/common';
 
 entity Departments : cuid, managed {
     name        : String(100);
+    company : String(5);
 
     employees   : Composition of many Employees
                     on employees.department = $self;
@@ -30,6 +31,8 @@ entity Employees : cuid, managed {
     salary     : Decimal(15,2);
 
     department : Association to Departments;
+
+    company: String(5);
 
     role       : Association to Roles;
 

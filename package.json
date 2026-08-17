@@ -12,7 +12,9 @@
   "scripts": {
     "start": "cds-serve",
     "watch-employees": "cds watch --open playground.employee.employees/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-employeeaction": "cds watch --open playground.employeeaction.employeeaction/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-employeeaction": "cds watch --open playground.employeeaction.employeeaction/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-employees-dependent-value-help": "cds watch --open playground1.employee.valuehelp.employeesdependentvaluehelp/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-employees-custompage": "cds watch --open playground.employee.custompage.employeescustompage/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
@@ -20,6 +22,9 @@
   ],
   "sapux": [
     "app/employees",
-    "app/employeeaction"
+    "app/employeeaction",
+    "app/employees-dependent-value-help",
+    "app/employees-dependent-value-help",
+    "app/employees-custompage"
   ]
 }

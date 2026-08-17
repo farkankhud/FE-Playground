@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="playground.employee.custompage.employeescustompage.ext.view.EmployeesDetail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:macros="sap.fe.macros"
+>
+    <ObjectPageLayout id="employeeObjectPage" showTitleInHeaderContent="true" showFooter="true">
+
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle id="employeeHeaderTitle">
+                <expandedHeading>
+                    <m:Title text="{lastName} {firstName}" />
+                </expandedHeading>
+                <snappedHeading>
+                    <m:Title text="{lastName} {firstName}" />
+                </snappedHeading>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <sections>
+            <ObjectPageSection id="generalInfoSection" title="General Information">
+                <subSections>
+                    <ObjectPageSubSection id="generalInfoSubSection">
+                        <blocks>
+                            <macros:Form
+                                id="generalInfoForm"
+                                metaPath="@com.sap.vocabularies.UI.v1.FieldGroup#GeneralInfo"
+                            />
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+        <footer>
+            <m:OverflowToolbar id="employeeFooterToolbar">
+                <m:ToolbarSpacer />
+                <m:Button
+                    id="createButton"
+                    text="Create"
+                    type="Emphasized"
+                    press=".onCreate"
+                    visible="{= !${ui>/isEditable} }"
+                />
+                <m:Button
+                    id="editButton"
+                    text="Edit"
+                    type="Emphasis"
+                    press=".onEdit"
+                    visible="{= !${ui>/isEditable} }"
+                />
+                <m:Button
+                    id="saveButton"
+                    text="Save"
+                    type="Emphasis"
+                    press=".onSave"
+                    visible="{ui>/isEditable}"
+                />
+                <m:Button
+                    id="cancelButton"
+                    text="Cancel"
+                    press=".onCancel"
+                    visible="{ui>/isEditable}"
+                />
+            </m:OverflowToolbar>
+        </footer>
+
+    </ObjectPageLayout>
+</mvc:View>

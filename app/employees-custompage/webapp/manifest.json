@@ -1,0 +1,136 @@
+{
+  "_version": "1.86.0",
+  "sap.app": {
+    "id": "playground.employee.custompage.employeescustompage",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:fpm",
+      "version": "1.30.0",
+      "toolsId": "3b097ca7-4c78-4972-b8ab-0508a7bdee8e"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/custompage/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.151.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.core": {},
+        "sap.fe.macros": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "playground.employee.custompage.employeescustompage.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "name": "EmployeesMain",
+          "pattern": ":?query:",
+          "target": "EmployeesMain"
+        },
+         {
+          "name": "EmployeesDetail",
+          "pattern": "Employees(ID={ID},IsActiveEntity={IsActiveEntity}):?query:",
+          "target": "EmployeesDetail"
+        }
+      ],
+      
+      "targets": {
+        "EmployeesMain": {
+          "type": "Component",
+          "id": "EmployeesMain",
+          "name": "sap.fe.core.fpm",
+          "options": {
+            "settings": {
+              "navigation": {
+                "Employees": {
+                  "detail": { "route": "EmployeesDetail" }
+                }
+              },
+              "contextPath": "/Employees",
+              "viewName": "playground.employee.custompage.employeescustompage.ext.view.Main"
+            }
+          }
+        },
+         "EmployeesDetail": {
+          "type": "Component",
+          "id": "EmployeesDetail",
+          "name": "sap.fe.core.fpm",
+          "options": {
+            "settings": {
+              "contextPath": "/Employees",
+              "viewName": "playground.employee.custompage.employeescustompage.ext.view.EmployeesDetail"
+            }
+          }
+        }
+
+      }
+    }
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
+  }
+}

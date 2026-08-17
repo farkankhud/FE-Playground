@@ -32,6 +32,16 @@ annotate service.Employees with @(
                 Label : 'Department',
                 Value : department_ID,
             },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Company',
+                Value : company,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'Role',
+                Value : role_ID,
+            },
         ],
     },
     UI.Facets : [
@@ -88,12 +98,36 @@ annotate service.Employees with {
                 ValueListProperty : 'ID',
             },
             {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : company,
+                ValueListProperty : 'company',
+            },
+            {
                 $Type : 'Common.ValueListParameterDisplayOnly',
                 ValueListProperty : 'name',
             },
         ],
     }
 };
+
+annotate service.Employees with {
+    role @Common.ValueList : {
+        $Type : 'Common.ValueListType',
+        CollectionPath : 'Roles',
+        Parameters : [
+            {
+                $Type : 'Common.ValueListParameterInOut',
+                LocalDataProperty : role_ID,
+                ValueListProperty : 'ID',
+            },
+            {
+                $Type : 'Common.ValueListParameterDisplayOnly',
+                ValueListProperty : 'roleName',
+            },
+        ],
+    }
+};
+
 
 
 

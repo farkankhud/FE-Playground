@@ -1,0 +1,6 @@
+ID,employeeNo,firstName,lastName,email,salary,company_ID,department_ID,role_ID
+10000000-0000-0000-0000-000000000001,E1001,John,Doe,john.doe@example.com,80000,C001,aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa,aaaaaaaa-1111-1111-1111-111111111111
+10000000-0000-0000-0000-000000000002,E1002,Alice,Smith,alice.smith@example.com,90000,C001,bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb,bbbbbbbb-1111-1111-1111-111111111111
+10000000-0000-0000-0000-000000000003,E1003,Robert,Brown,robert.brown@example.com,75000,C002,cccccccc-cccc-cccc-cccc-cccccccccccc,cccccccc-1111-1111-1111-111111111111
+10000000-0000-0000-0000-000000000004,E1004,Emma,Wilson,emma.wilson@example.com,70000,C002,dddddddd-dddd-dddd-dddd-dddddddddddd,dddddddd-1111-1111-1111-111111111111
+10000000-0000-0000-0000-000000000005,E1005,David,Martin,david.martin@example.com,85000,C003,eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee,eeeeeeee-1111-1111-1111-111111111111

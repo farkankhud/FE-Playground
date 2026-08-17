@@ -1,0 +1,37 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+ xmlns:macros="sap.fe.macros" xmlns:macrosTable="sap.fe.macros.table"
+    xmlns:html="http://www.w3.org/1999/xhtml" controllerName="playground.employee.custompage.employeescustompage.ext.view.Main">
+    <Page id="Main" title="{i18n>MainTitle}">
+        <content>
+            <macros:FilterBar
+                id="employeesFilterBar"
+                contextPath="/Employees"
+                metaPath="@com.sap.vocabularies.UI.v1.SelectionFields#SF1"
+            />
+            <macros:Table
+                id="employeesTable"
+                contextPath="/Employees"
+                metaPath="@com.sap.vocabularies.UI.v1.LineItem"
+                filterBar="employeesFilterBar"
+                type="ResponsiveTable"
+                selectionMode="Single"
+            >
+                <macros:actions>
+                    <macrosTable:Action
+                    id="createEmployee"
+                        key="createEmployee"
+                        text="Create"
+                        press=".onCreate"
+                    />
+                    <macrosTable:Action
+                    id="deleteEmployee"
+                        key="deleteEmployee"
+                        text="Delete"
+                        requiresSelection="true"
+                        press=".onDelete"
+                    />
+                </macros:actions>
+            </macros:Table>
+        </content>
+    </Page>
+</mvc:View>
