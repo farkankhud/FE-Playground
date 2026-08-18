@@ -16,3 +16,12 @@ service ActionService {
         as projection on playground.Roles;
 
 }
+// annotate ActionService.Employees.actions.promoteEmployee with
+//     @Core.OperationAvailable: not isPromoted;
+annotate ActionService.Employees with actions {
+    promoteEmployee @Core.OperationAvailable: {
+        $edmJson: {
+            $Not: { $Path: 'isPromoted' }
+        }
+    };
+};

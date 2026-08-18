@@ -42,6 +42,11 @@ annotate service.Employees with @(
                 Label : 'Role',
                 Value : role_ID,
             },
+            {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'actionService.promoteEmployee',
+            Label : 'Employee promoted',
+        },
         ],
     },
     UI.Facets : [

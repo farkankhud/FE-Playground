@@ -4,7 +4,9 @@ class ActionService extends cds.ApplicationService {
     const { Employees } = this.entities;
 
         this.on('promoteEmployee', Employees, async (req) => {
-
+              const { ID } = req.params[0];
+    await UPDATE(req.subject).with({ isPromoted: true });
+    // return `Employee promoted`;
             console.log('Promote Employee action called');
             req.info('Employee promoted successfully');
             return 'Employee promoted successfully';

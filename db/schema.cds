@@ -35,5 +35,6 @@ entity Employees : cuid, managed {
     company: String(5);
 
     role       : Association to Roles;
+    isPromoted : Boolean default false;
 
 }
